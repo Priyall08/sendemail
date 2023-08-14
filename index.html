@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Sender</title>
+</head>
+<body>
+    <h2>Email Sender</h2>
+    <form action="send_email.php" method="post" enctype="multipart/form-data">
+        <label for="recipient">Recipient Email:</label>
+        <input type="email" id="recipient" name="recipient" required><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        
+        <input type="radio" id="simple" name="mail_type" value="simple" checked>
+        <label for="simple">Simple Mail</label><br>
+        
+        <input type="radio" id="attach" name="mail_type" value="attach">
+        <label for="attach">Attach Mail</label><br>
+        
+        <input type="file" name="attachment" id="attachment" style="display: none;"><br>
+        
+        <input type="radio" id="cc" name="mail_type" value="cc">
+        <label for="cc">CC Mail</label><br>
+        
+        <input type="radio" id="bcc" name="mail_type" value="bcc">
+        <label for="bcc">BCC Mail</label><br>
+        
+        <input type="submit" value="Send Email">
+    </form>
+</body>
+</html>
